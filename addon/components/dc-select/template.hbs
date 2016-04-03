@@ -2,7 +2,9 @@
     <option value={{null}}>Choose One...</option>
 
     {{#each options as |option|}}
-        <option value={{option.value}} selected={{eq option.value selectedOption.value}}>
+        <option value={{option.value}}
+                selected={{eq option.value selectedOption.value}}
+                disabled={{option.disabled}}>
             {{option.label}}
         </option>
     {{/each}}
