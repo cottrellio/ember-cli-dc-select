@@ -1,0 +1,7 @@
+<h2 id="title">Welcome to Ember</h2>
+
+{{dc-select onChange=(action "selectionDidChange")
+            selectedOption=(readonly selectedOption)
+            options=(readonly options)}}
+
+{{outlet}}
