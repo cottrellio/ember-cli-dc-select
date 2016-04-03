@@ -1,26 +1,57 @@
 # Ember-cli-dc-select
 
-This README outlines the details of collaborating on this Ember addon.
+A simple select component for Ember.
 
-## Installation
+## Example Use
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+_controller.js_
+```
+selectedOption: {
+  label: 'Test 2',
+  value: 2
+},
 
-## Running
+options: Ember.A([
+  {
+    label: 'Test 1',
+    value: 1,
+    disabled: false
+  },
+  {
+    label: 'Test 2',
+    value: 2,
+    disabled: false
+  },
+  {
+    label: 'Test 3',
+    value: 3,
+    disabled: true
+  },
+  {
+    label: 'Test 4',
+    value: 4,
+    disabled: false
+  },
+  {
+    label: 'Test 5',
+    value: 5,
+    disabled: false
+  }
+]),
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+actions: {
 
-## Running Tests
+  selectionDidChange(value) {
+    let selected = this.get('options').findBy('value', +value);
+    this.set('selectedOption', selected);
+  }
 
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+}
+```
 
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
+_template.hbs_
+```
+{{dc-select onChange=(action "selectionDidChange")
+            selectedOption=(readonly selectedOption)
+            options=(readonly options)}}
+```
