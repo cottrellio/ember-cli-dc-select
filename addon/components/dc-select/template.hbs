@@ -1,7 +1,7 @@
 <select onChange={{action onChange value='target.value'}}>
     <option value={{null}}>Choose One...</option>
 
-    {{#each options as |option|}}
+    {{#each content as |option|}}
         <option value={{get option optionValueKey}}
                 selected={{eq (get option optionValueKey) (get selectedOption optionValueKey)}}
                 disabled={{option.isDisabled}}>
