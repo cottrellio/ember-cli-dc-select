@@ -1,1 +1,1 @@
-export { default } from 'ember-cli-dc-select/components/dc-select/component';
+export { default } from 'ember-dc-select/components/dc-select/component';

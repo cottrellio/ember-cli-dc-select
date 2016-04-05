@@ -11,27 +11,27 @@ export default Ember.Controller.extend({
     {
       label: 'Test 1',
       value: 1,
-      disabled: false
+      isDisabled: false
     },
     {
       label: 'Test 2',
       value: 2,
-      disabled: false
+      isDisabled: false
     },
     {
       label: 'Test 3',
       value: 3,
-      disabled: true
+      isDisabled: true
     },
     {
       label: 'Test 4',
       value: 4,
-      disabled: false
+      isDisabled: false
     },
     {
       label: 'Test 5',
       value: 5,
-      disabled: false
+      isDisabled: false
     }
   ]),
 

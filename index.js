@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-cli-dc-select'
+  name: 'ember-dc-select'
 };

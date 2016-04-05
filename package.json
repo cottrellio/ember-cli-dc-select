@@ -1,5 +1,5 @@
 {
-  "name": "ember-cli-dc-select",
+  "name": "ember-dc-select",
   "version": "0.0.1",
   "description": "A simple select component.",
   "directories": {

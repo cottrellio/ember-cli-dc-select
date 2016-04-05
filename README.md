@@ -1,4 +1,4 @@
-# Ember-cli-dc-select
+# ember-dc-select
 
 A simple select component for Ember.
 
